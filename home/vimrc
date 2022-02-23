@@ -14,19 +14,25 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-sensible'
 
   Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+  Plug 'Xuyuanp/nerdtree-git-plugin' " showing git status in NERDTree
+
   Plug 'preservim/nerdcommenter'
   Plug 'mileszs/ack.vim'
 
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rhubarb' " GBrowse handler
-  
+  Plug 'airblade/vim-gitgutter' " shows git diff markers in the sign column
+
   Plug 'mhinz/vim-startify'
   Plug 'editorconfig/editorconfig-vim'
 
   Plug 'tpope/vim-sleuth'  " no need to set buffer options like tabstop,shiftwidth,expandtab,etc
   Plug 'tpope/vim-surround'
   Plug 'junegunn/vim-easy-align'
+  Plug 'RRethy/vim-illuminate' " automatically highlighting other uses of the current word under the cursor
+  Plug 'Yggdroot/indentLine' " display the indention levels with thin vertical lines
 
+  Plug 'pbrisbin/vim-mkdir'
   " If fzf has already been installed via Homebrew, use the existing fzf
   " Otherwise, install fzf. The `--all` flag makes fzf accessible outside of vim
   if isdirectory("/usr/local/opt/fzf")
@@ -42,6 +48,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline-themes'
 
   Plug 'sheerun/vim-polyglot'
+  Plug 'mattn/emmet-vim'
+
   Plug 'elixir-editors/vim-elixir'
   Plug 'slashmili/alchemist.vim'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -80,6 +88,9 @@ nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
+nmap ]h <Plug>(GitGutterNextHunk)
+nmap [h <Plug>(GitGutterPrevHunk)
+
 if has('nvim')
     " Neovim specific commands
 else
@@ -90,6 +101,10 @@ endif
 nnoremap confe :e $MYVIMRC<CR>
 " Reload vims configuration file
 nnoremap confr :source $MYVIMRC<CR>
+
+" Enable just for html/css
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
