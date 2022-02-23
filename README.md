@@ -1,25 +1,38 @@
 # VIM
 
+if [rcm](https://github.com/thoughtbot/dotfiles/tree/master#install) to manage dotfiles
+
+```
+brew install rcm
+rcup -v -d home
+```
+
 [Minimalist Vim Plugin Manager](https://github.com/junegunn/vim-plug)
 
 ## [注释](https://github.com/preservim/nerdcommenter)
 
-选中需要操作的行 比如 v3j 然后操作
-`<leader>cc`  NERDCommenterComment
-`<leader>cu`  NERDCommenterUncomment
-`<leader>ci`  NERDCommenterInvert
+先选中需要操作的行 比如 v3j 然后执行相应的操作
+
+```
+<leader>cc  NERDCommenterComment
+<leader>cu  NERDCommenterUncomment
+<leader>ci  NERDCommenterInvert
+```
 
 ## [对齐](https://github.com/junegunn/vim-easy-align)
 
-" Start interactive EasyAlign in visual mode (e.g. vipga)
-`xmap ga <Plug>(EasyAlign)`
-
-选中需要操作的行 vip （visually select inner paragraph）
+先选中需要操作的行 vip （visually select inner paragraph）
 ga = 按等号对齐
 
 ## [NerdTree](https://github.com/preservim/nerdtree)
 
 `<leader>d`
+
+Press `I` (Shift+i) to toggle hidden files in the NERDTree explorer window.
+
+To enable this behavior by default, add this line to your .vimrc file:
+
+`let NERDTreeShowHidden=1`
 
 
 ## [FZF](https://github.com/junegunn/fzf.vim)
@@ -28,12 +41,11 @@ ga = 按等号对齐
 
 ## [vim-surround](https://github.com/tpope/vim-surround)
 
-
-
+https://towardsdatascience.com/how-i-learned-to-enjoy-vim-e310e53e8d56
 
 ## Other plugins
 
-- https://github.com/tpope/vim-sensible
+- https://github.com/tpope/vim-sensible/blob/master/plugin/sensible.vim
     
   > sensible defaults
 

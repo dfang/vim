@@ -1,0 +1,50 @@
+1. reload .vimrc
+
+:source ~/.vimrc
+
+2. 设置
+
+:set list?   获取当前设置的值
+:set list!   取反值
+:set nolist
+:set list
+:set listchars?
+:set number
+:set nonu
+:set relativenumber
+
+:set nohls
+
+:function
+
+3. tabs vs spaces
+
+:retab convert tabs to spaces
+
+https://howchoo.com/g/m2u0nthkyti/vim-convert-tabs-to-spaces
+
+https://github.com/tpope/vim-sleuth
+
+
+4. vim --clean . start vim with no plugins, no viminfo
+
+
+:e  :edit
+:so :source
+
+:call <TAB>
+:!
+:sh
+:edit! it will discard local changes and reload
+
+:!git diff %
+:!git add %
+
+:source %
+:source $MYVIMRC
+% means the current open buffer
+
+
+
+https://devhints.io/vimscript
+https://github.com/thoughtbot/dotfiles
