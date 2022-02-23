@@ -6,6 +6,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 set nocompatible
+set fileencoding=utf-8
 
 " see docs on https://github.com/dfang/vim
 " remember to mkdir ~/.vim/{plugged,backups,swap,tmp} to avoid errors
