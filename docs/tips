@@ -14,6 +14,7 @@
 :set relativenumber
 
 :set nohls
+:set nohlsearch
 
 :function
 
@@ -24,10 +25,6 @@
 https://howchoo.com/g/m2u0nthkyti/vim-convert-tabs-to-spaces
 
 https://github.com/tpope/vim-sleuth
-
-
-4. vim --clean . start vim with no plugins, no viminfo
-
 
 :e  :edit
 :so :source
@@ -45,6 +42,10 @@ https://github.com/tpope/vim-sleuth
 % means the current open buffer
 
 
+4. vim --clean . start vim with no plugins, no viminfo
+
+5. Map Ctrl + p to open fuzzy find (FZF)
+nnoremap <c-p> :Files<cr>
 
 https://devhints.io/vimscript
 https://github.com/thoughtbot/dotfiles
