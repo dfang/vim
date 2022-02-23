@@ -1,5 +1,11 @@
 # VIM
 
+- [快速使用该配置](#quickstart)
+- [NerdTree](#nerdtree)
+- [FZF](#fzf)
+- [注释](#注释)
+- [对齐](#对齐)
+
 RECOMMENDATION!
 
 use [rcm](https://github.com/thoughtbot/dotfiles/tree/master#install) to manage dotfiles
@@ -90,6 +96,8 @@ https://github.com/dfang/vim/blob/master/docs/tips
 - https://github.com/airblade/vim-gitgutter
 
   > display git diff markers(gutter) in the sign column
+
+- https://github.com/tpope/vim-fugitive
 
 - https://github.com/mattn/emmet-vim
 
