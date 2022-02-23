@@ -1,30 +1,29 @@
 # VIM
 
-if you use [rcm](https://github.com/thoughtbot/dotfiles/tree/master#install) to manage dotfiles
+RECOMMENDATION!
+
+use [rcm](https://github.com/thoughtbot/dotfiles/tree/master#install) to manage dotfiles
 
 ```
 brew install rcm
 rcup -v -d home
 ```
 
-[Minimalist Vim Plugin Manager](https://github.com/junegunn/vim-plug)
+use [vim-plug](https://github.com/junegunn/vim-plug) to manage vim plugins
 
-## [注释](https://github.com/preservim/nerdcommenter)
 
-先选中需要操作的行 比如 v3j 然后执行相应的操作
+## Quickstart
 
 ```
-<leader>cc  NERDCommenterComment
-<leader>cu  NERDCommenterUncomment
-<leader>ci  NERDCommenterInvert
+cd ~/src
+git clone https://github.com/dfang/vim.git
+cd vim
+./script/setup
 ```
 
-## [对齐](https://github.com/junegunn/vim-easy-align)
+## 本配置中最常用的操作
 
-先选中需要操作的行 vip （visually select inner paragraph）
-ga = 按等号对齐
-
-## [NerdTree](https://github.com/preservim/nerdtree)
+### [NerdTree](https://github.com/preservim/nerdtree)
 
 `<leader>d`
 
@@ -34,15 +33,31 @@ To enable this behavior by default, add this line to your .vimrc file:
 
 `let NERDTreeShowHidden=1`
 
-## [FZF](https://github.com/junegunn/fzf.vim)
+### [FZF](https://github.com/junegunn/fzf.vim)
 
 `<leader>f`
 
-## [vim-surround](https://github.com/tpope/vim-surround)
+### [vim-surround](https://github.com/tpope/vim-surround)
 
 https://towardsdatascience.com/how-i-learned-to-enjoy-vim-e310e53e8d56
 
-## 常用命令
+
+### [注释](https://github.com/preservim/nerdcommenter)
+
+先选中需要操作的行 比如 v3j 然后执行相应的操作
+
+```
+<leader>cc  NERDCommenterComment
+<leader>cu  NERDCommenterUncomment
+<leader>ci  NERDCommenterInvert
+```
+
+### [对齐](https://github.com/junegunn/vim-easy-align)
+
+先选中需要操作的行 vip （visually select inner paragraph）
+ga = 按等号对齐
+
+## 其他常用命令
 
 ```
 [h jump to previous hunk
