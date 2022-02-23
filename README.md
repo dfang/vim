@@ -5,6 +5,10 @@
 - [FZF](#fzf)
 - [注释](#注释)
 - [对齐](#对齐)
+- [缩进](#缩进)
+- [折叠](#折叠)
+- [Navigation](#navigation)
+
 
 RECOMMENDATION!
 
@@ -62,6 +66,12 @@ https://towardsdatascience.com/how-i-learned-to-enjoy-vim-e310e53e8d56
 
 先选中需要操作的行 vip （visually select inner paragraph）
 ga = 按等号对齐
+
+### [缩进](https://devhints.io/vim#misc)
+
+### [折叠](https://devhints.io/vim#misc)
+
+### [Navigation](https://devhints.io/vim)
 
 ## 其他常用命令
 
