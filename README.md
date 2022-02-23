@@ -58,6 +58,9 @@ https://towardsdatascience.com/how-i-learned-to-enjoy-vim-e310e53e8d56
 :GitGutterStageHunk
 
 ```
+# [Tips](https://github.com/dfang/vim/blob/master/docs/tips)
+
+https://github.com/dfang/vim/blob/master/docs/tips
 
 ## Other plugins
 
