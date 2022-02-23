@@ -42,6 +42,11 @@ https://github.com/tpope/vim-sleuth
 % means the current open buffer
 
 
+set cursorline!
+set cursorcolumn!
+set cursorbind!
+
+
 4. vim --clean . start vim with no plugins, no viminfo
 
 5. Map Ctrl + p to open fuzzy find (FZF)
@@ -51,6 +56,12 @@ nnoremap <c-p> :Files<cr>
 " https://github.com/junegunn/fzf.vim/issues/326
 nnoremap <silent> <expr> <c-p> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":FZF\<cr>"
 
+" Everything you need to know about vim !!!!
+https://github.com/mhinz/vim-galore
+
 
 https://devhints.io/vimscript
-https://github.com/thoughtbot/dotfiles
+https://github.com/thoughtbot/dotfiles/blob/master/vimrc
+https://github.com/nikolalsvk/dotfiles
+https://github.com/technicalpickles/pickled-vim/blob/master/home/.vimrc
+https://github.com/maxrodrigo/homesick/blob/master/.vimrc
