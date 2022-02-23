@@ -46,6 +46,11 @@ https://github.com/tpope/vim-sleuth
 
 5. Map Ctrl + p to open fuzzy find (FZF)
 nnoremap <c-p> :Files<cr>
+" do not open file in NerdTree buffer
+" https://github.com/junegunn/fzf/issues/453
+" https://github.com/junegunn/fzf.vim/issues/326
+nnoremap <silent> <expr> <c-p> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":FZF\<cr>"
+
 
 https://devhints.io/vimscript
 https://github.com/thoughtbot/dotfiles

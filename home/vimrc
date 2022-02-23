@@ -212,7 +212,9 @@ noremap <leader>stw :call StripTrailingWhitespaces()<CR>
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 " Map Ctrl + p to open fuzzy find (FZF)
-nnoremap <c-p> :Files<cr>
+" nnoremap <c-p> :Files<cr>
+nnoremap <silent> <expr> <c-p> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":FZF\<cr>"
+
 
 if !exists("*Zen")
   function! Zen()
@@ -246,3 +248,4 @@ set nolist
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
+
