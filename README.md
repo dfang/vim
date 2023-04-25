@@ -9,19 +9,6 @@
 - [折叠](#折叠)
 - [Navigation](#navigation)
 
-
-RECOMMENDATION!
-
-use [rcm](https://github.com/thoughtbot/dotfiles/tree/master#install) to manage dotfiles
-
-```
-brew install rcm
-rcup -v -d home
-```
-
-use [vim-plug](https://github.com/junegunn/vim-plug) to manage vim plugins
-
-
 ## Quickstart
 
 ```
@@ -30,6 +17,14 @@ git clone https://github.com/dfang/vim.git
 cd vim
 ./script/setup
 ```
+
+```
+homesick clone dfang/vim
+homesick link vim
+```
+
+homesick clone will clone to ~/.homesick/repos, homesick link will create symbolic links
+
 
 ## 本配置中最常用的操作
 
