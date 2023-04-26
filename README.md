@@ -1,13 +1,16 @@
 # VIM
 
 - [快速使用该配置](#quickstart)
+- [Leader](#leader)
+- [Navigation](#navigation)
 - [NerdTree](#nerdtree)
 - [FZF](#fzf)
 - [注释](#注释)
 - [对齐](#对齐)
 - [缩进](#缩进)
 - [折叠](#折叠)
-- [Navigation](#navigation)
+- [格式化JSON](#format-json-in-vim)
+- [其他](#其他常用命令)
 
 ## Quickstart
 
@@ -28,19 +31,36 @@ homesick clone will clone to ~/.homesick/repos, homesick link will create symbol
 
 ## 本配置中最常用的操作
 
-### [NerdTree](https://github.com/preservim/nerdtree)
+### leader
 
 `<leader>d`
 
+### [Navigation](https://devhints.io/vim)
+
+```
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
+```
+
+### [NerdTree](https://github.com/preservim/nerdtree)
+
 Press `I` (Shift+i) to toggle hidden files in the NERDTree explorer window.
 
-To enable this behavior by default, add this line to your .vimrc file:
-
-`let NERDTreeShowHidden=1`
+```
+<Leader>d :NERDTreeToggle         # to toggle NERDTree
+:NERDTreeFind                     # reveal file in nerdtree
+```
 
 ### [FZF](https://github.com/junegunn/fzf.vim)
 
-`<leader>f`
+```
+nmap <Leader>f :GFiles<CR>
+nmap <Leader>F :Files<CR>
+nmap <Leader>b :Buffers<CR>
+nmap <Leader>h :History<CR>
+```
 
 ### [vim-surround](https://github.com/tpope/vim-surround)
 
@@ -52,25 +72,49 @@ https://towardsdatascience.com/how-i-learned-to-enjoy-vim-e310e53e8d56
 先选中需要操作的行 比如 v3j 然后执行相应的操作
 
 ```
+<leader>ci  NERDCommenterInvert
 <leader>cc  NERDCommenterComment
 <leader>cu  NERDCommenterUncomment
-<leader>ci  NERDCommenterInvert
 ```
+
+> 关于注释代码: 记住`<leader>ci`就够了，如果没有安装nerdcommenter，那就用vim原始模式: 先ctrl+v进入列选模式，I插入注释符，快速按ESC
+
 
 ### [对齐](https://github.com/junegunn/vim-easy-align)
 
 先选中需要操作的行 vip （visually select inner paragraph）
 ga = 按等号对齐
 
+ga -> CTRL + X -> 输入正则
+
 ### [缩进](https://devhints.io/vim#misc)
+
+```
+set paste
+```
 
 ### [折叠](https://devhints.io/vim#misc)
 
-### [Navigation](https://devhints.io/vim)
+```
+:set fdm?
+:set fdm=marker
+
+za
+```
+
+### Format JSON in vim
+
+```
+:%!jq .
+:%!python -m json.tool
+```
 
 ## 其他常用命令
 
 ```
+ggvG
+gg=G
+
 [h jump to previous hunk
 ]h jump to next hunk
 
