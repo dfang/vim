@@ -33,7 +33,11 @@ homesick clone will clone to ~/.homesick/repos, homesick link will create symbol
 
 ### leader
 
-`<leader>d`
+```
+let mapleader = ","
+```
+
+> try `,d`
 
 ### [Navigation](https://devhints.io/vim)
 
@@ -46,12 +50,12 @@ nmap <silent> <c-l> :wincmd l<CR>
 
 ### [NerdTree](https://github.com/preservim/nerdtree)
 
-Press `I` (Shift+i) to toggle hidden files in the NERDTree explorer window.
-
 ```
 <Leader>d :NERDTreeToggle         # to toggle NERDTree
 :NERDTreeFind                     # reveal file in nerdtree
 ```
+
+> tips: Press `I` (Shift+i) to toggle hidden files in the NERDTree explorer window.
 
 ### [FZF](https://github.com/junegunn/fzf.vim)
 
